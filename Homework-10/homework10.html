@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/css10.css">
+  </head>
+  <body>
+
+    <header>
+
+    </header>
+
+    <section>
+
+        <div class="article">
+            <p>Короткий текст 1</p>
+            <p>
+                Длинный текст Длинный текст
+                Длинный текст Длинный текст
+                Длинный текст Длинный текст
+            </p>
+        </div>
+
+        <div class="article">
+            <p>Короткий текст 2</p>
+            <p>
+                Длинный текст Длинный текст
+                Длинный текст Длинный текст
+                Длинный текст Длинный текст
+            </p>
+        </div>
+
+        <div class="article">
+            <p>Короткий текст 3</p>
+            <p>
+                Длинный текст Длинный текст
+                Длинный текст Длинный текст
+                Длинный текст Длинный текст
+            </p>
+        </div>
+
+    </section>
+
+    <form action="#" method="post" name="lesson">
+
+        <fieldset>
+            <legend>Текстовый ввод</legend>
+            <div>
+                <label for="login">Введите логин</label>
+                <input name="login" id="login" type="text">
+            </div>
+            <div>
+                <label for="pwd">Введите пароль</label>
+                <input name="pwd" id="pwd" type="password">
+            </div>
+        </fieldset>
+
+        <fieldset name="checkbox_fieldset">
+            <legend>Checkbox | Radio</legend>
+            <div>
+                <p>Выбор цвета</p>
+                <label><input  value="lightblue" name="color" type="radio">Синий</label>
+                <label><input  value="yellow" name="color" type="radio">Желтый</label>
+            </div>
+            <div>
+                <p>Отметьте интересующие языки программирования</p>
+                <label><input checked value="php" name="lang[]" type="checkbox">PHP</label>
+                <label><input value="java" name="lang[]" type="checkbox">Java</label>
+                <label><input checked value="python" name="lang[]" type="checkbox">Python</label>
+                <label><input value="ruby" name="lang[]" type="checkbox">Ruby</label>
+            </div>
+            <div>
+                <label><input type="checkbox" name="inform">Отметьте, если хотите указать дополнительную информацию</label>
+                <input id="addition"  type="text" disabled>
+            </div>
+        </fieldset>
+
+
+<script src="js/js10.js"></script>
+  </body>
+</html>

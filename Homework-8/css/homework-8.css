@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+.anims {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+h2 {
+  padding-left: 2rem;
+}
+
+.Text {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  border: 3px solid green;
+  margin: 2rem;
+  padding: 1rem;
+  max-width: 35rem;
+  background: lightyellow;
+  border-radius: 5px;
+}
+
+.imageDiv {
+  padding-right: 2rem;
+  width: 20rem;
+
+  flex: 1;
+}
+
+.info p {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  border-bottom: 1.5px solid green;
+}
+
+
+table,
+td {
+  border: 1.5px solid blue;
+  border-collapse: collapse;
+  background: lightblue;
+  padding: 1rem;
+}
+
+table {
+  margin-bottom: 4rem;
+  margin-left: 10rem;
+}
+th {
+  background: lightblue;
+}
+
+#game-field div {
+  background: lightblue;
+}
+
+#game-field {
+  margin-left: 10rem;
+}
