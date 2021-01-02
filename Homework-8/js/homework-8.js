@@ -203,6 +203,11 @@ generateTable(goods);
 //     для 2й ячейки значение атрибута prise="book",
 //     для 3й ячейки значение атрибута prise="car"
 
+
+
+
+
+
 let bigPrise = {
      cat: "Кот",
      book: "Книга",
@@ -210,7 +215,7 @@ let bigPrise = {
    };
 
 function generateField(n) {
-  if (n < 3 || n > 30) return;
+  if (n < 3 ) return;
 
   let counter = 0;
     let container = document.createElement("div");
@@ -231,8 +236,41 @@ function generateField(n) {
 
     let priseArr = Object.keys(bigPrise);
     for ( let present of priseArr) {
-      document.getElementById(Math.floor(Math.random() * (n*n))).setAttribute("data-present", present);
+      document.getElementById(Math.floor(Math.random() * (n*n))+1 ).setAttribute("data-present", present);
     }
-
 }
+
 generateField(3);
+
+// Задача на генерацию игрового поля (часть 2):
+//
+//  Пользователю дается определенное количество попыток, чтобы найти приз,
+//  если ему удается найти спрятанный приз за указанное количество попыток,
+//  то отобразить пользователю его приз, если не удалось, то вывести информацию об этом.
+//
+//  После каждой попытки отображать, сколько попыток осталось.
+//  Если пользователь получил приз или закончились попытки, он не может продолжить игру (удалить обработчик
+
+let presentContainer = document.getElementById("game-field");
+presentContainer.addEventListener("click", showPresent);
+
+
+document.getElementById("game-field")
+let trying = 0;
+function showPresent(event) {
+    // console.log("Информация о событии", event);
+    let clickElem = event.target;
+    let presentValue = clickElem.dataset.present;
+    if (presentValue) {
+        clickElem.innerText = bigPrise[presentValue];
+        this.removeEventListener("click", showPresent);
+    } else
+      if (trying < 3){
+        trying ++;
+        clickElem.innerText = 'попытка'+ trying;
+        }
+        if (trying === 3){
+          clickElem.innerText = 'игра окончена';
+        this.removeEventListener("click", showPresent);
+        }
+}
