@@ -267,7 +267,7 @@ function showPresent(event) {
     } else
       if (trying < 3){
         trying ++;
-        clickElem.innerText = 'попытка'+ trying;
+        clickElem.innerText = 'осталось попыток'+ (3-trying);
         }
         if (trying === 3){
           clickElem.innerText = 'игра окончена';
