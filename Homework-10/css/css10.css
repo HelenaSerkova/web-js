@@ -217,3 +217,92 @@ input[type="reset"] {
 input.error-input {
     border: 1px solid red;
 }
+
+h2 {
+  color: #c0c0c0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.massOfBooks {
+  margin-top: 2rem;
+}
+
+#blocks {
+  /* background: #8b8b8b; */
+  background: #6491af;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  padding: 0.5rem;
+  border: 2px solid #5f5f5f;
+
+}
+
+.cardOfBook {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #c0c0c0;
+  margin: 1rem;
+  border-radius: 7px;
+  border: 2px solid #5f5f5f;
+}
+
+.autTitle {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  background: #e4e4e4;
+  border-radius: 7px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 2px solid #5f5f5f;
+  width: 18rem;
+}
+
+.autTitle p {
+  font-size: 19px;
+  text-align: center;
+}
+
+.pagesOfBook span {
+  font-size: 17px;
+}
+
+.inputDiv{
+  margin-right: 5rem;
+  margin-left: auto;
+}
+
+.inputDiv input {
+  height: 2.5rem;
+  font-size: 17px;
+  margin-left: 1rem;
+  width: 5rem;
+  text-align: center;
+  background: #e4e4e4;
+  border-radius: 7px;
+  border: 2px solid #5f5f5f;
+
+}
+
+.inputDiv .b-less:hover {
+  background: #6491af;
+  cursor: pointer;
+}
+
+.inputDiv .b-more:hover {
+  background: #6491af;
+  cursor: pointer;
+
+}
+
+.b-less {
+
+}
+
+.b-more {
+
+}

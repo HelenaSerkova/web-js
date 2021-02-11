@@ -153,12 +153,15 @@ let articles = [
 
 function generateTable(arr) {
   let table = document.createElement("table");
+  // let thead = document.createElement("thead");
   let row = table.insertRow();
   for (let elem in arr[0]){
     let th = document.createElement("th");
     th.innerText = elem;
     th.setAttribute("th_head", elem);
     row.append(th);
+    // thead.append(row);
+    // table.append(thead); // пропад.заголовки
   }
 
   for (let element of arr) {
@@ -175,17 +178,94 @@ generateTable(articles);
 generateTable(goods);
 
 
+
+let table_new = document.querySelector("table");
+let thElems = document.querySelectorAll("th");
+for (let thElem of thElems) {
+  thElem.addEventListener("click", sortTable);
+}
+
+// должна возвращать:
+// 0, если first === second
+// отрицательное число, если first < second
+// положительное число, если first > second
+// function sortArr(first, second) {
+//     //либо if (first === second) return 0; и тд, либо:
+//     return first - second;
+//}
+
+
+
+
+function sortTable() { // по возрасту, по городу
+    // return first.age - second.age; // по возрасту
+    goods.sort((rowA, rowB) => rowA.cells[0].innerText > rowB.cells[0].innerText ? 1 : -1);
+   table.tBodies[0].append(...sortedRows);
+    // return first.title.localeCompare(second.title); // по городу
+}
+
+
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//
+//     const getSort = ({ target }) => {
+//         const order = (target.dataset.order = -(target.dataset.order || -1));
+//         const index = [...target.parentNode.cells].indexOf(target);
+//         const thList = Array.from(target.) //this.querySelectorAll(`[t_body=${th_head}]`);
+//         const index = thList.indexOf(target);
+//         const collator = new Intl.Collator(['en', 'ru'], { numeric: true });
+//         const comparator = (index, order) => (a, b) => order * collator.compare(
+//             a.children[index].innerHTML,
+//             b.children[index].innerHTML
+//         );
+//
+//         for(const tBody of target.closest('table').tBodies)
+//             tBody.append(...[...tBody.rows].sort(comparator(index, order)));
+//
+//         for(const cell of target.parentNode.cells)
+//             cell.classList.toggle('sorted', cell === target);
+//     };
+//
+//     document.querySelectorAll('.tableJS th').forEach(tableTH => tableTH.addEventListener('click', () => getSort(event)));
+//
+// });
+
+
+
 // Homework-10
-// let thElem = document.getAttribute("th_head");
-// for (let elem_s of thElem) {
-//   elem.addEventListener("click", sortTable);
-// }
+
+//
 // function sortTable() {
-//   let arr = array.from(table.rows)
-//   .sort((rowA, rowB) => rowA.cells[0].innerHTML > rowB.cells[0].innerHTML ? 1 : -1);
+// //   let arrs = document.querySelectorAll("t_body");
+// // 	let sorted = [...arrs].sort(function(a, b) {
+// // 		if (a.children[1].innerText >= b.children[
+// // 			1].innerText) {
+// // 			return 1;
+// // 		} else {
+// // 			return -1;
+// // 		}
+// // 	});
+// //
+// // 	table_new.innerTex . = '';
+// //
+// // 	for (let tr of sorted) {
+// // 		table_new.appendChild(tr);
+// // 	}
+// // };
+//
+//
+//
+//
+// // () {
+//   let arrs = document.querySelectorAll("t_body");
+//   arrs.sort((rowA, rowB) => rowA.cells[0].innerText > rowB.cells[0].innerText ? 1 : -1);
 //   table.tBodies[0].append(...sortedRows);
 //
-// }
+// };
 
 
 // Задача 3. ДОПОЛНИТЕЛЬНАЯ ЗАДАЧА.
